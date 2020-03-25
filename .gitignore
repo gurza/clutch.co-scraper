@@ -1,0 +1,6 @@
+# general things to ignore
+*.py[cod]
+
+# Mr Developer
+.idea/
+.ve/

@@ -14,5 +14,8 @@ class ProfileSpider(scrapy.Spider):
             'Website': response.css('div.quick-menu ul.nav-stacked li.website-link-a a::attr(href)').get(),
             'Av hourly rate': response.css('div.field-name-field-pp-hrly-rate-range div.field-item::text').get(),
             'Employees': response.css('div.field-name-field-pp-size-people div.field-item::text').get(),
+            'Founded date':
+                'Undisclosed' if response.css('div.field-name-field-pp-year-founded').css('.undisclosed')
+                else response.css('div.field-name-field-pp-year-founded div.field-item::text').get(),
 
         }

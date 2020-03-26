@@ -13,5 +13,6 @@ class ProfileSpider(scrapy.Spider):
             'Location': response.css('div.quick-menu ul.nav-stacked div.city-name::text').get(),
             'Website': response.css('div.quick-menu ul.nav-stacked li.website-link-a a::attr(href)').get(),
             'Av hourly rate': response.css('div.field-name-field-pp-hrly-rate-range div.field-item::text').get(),
+            'Employees': response.css('div.field-name-field-pp-size-people div.field-item::text').get(),
 
         }

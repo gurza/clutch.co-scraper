@@ -10,5 +10,6 @@ class ProfileSpider(scrapy.Spider):
     def parse(self, response):
         yield {
             'Company name': response.css('h1.page-title::text').get().strip(),
+            'Location': response.css('div.contact-dropdown-mpad div.city-name::text').get(),
 
         }

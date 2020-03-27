@@ -1,7 +1,7 @@
 clutch.co scraper
 =================
 
-Scrape web developers from [https://clutch.co/web-developers]().
+Scrape web developers from [https://clutch.co/web-developers](https://clutch.co/web-developers).
 
 Datapoints:
 * Company name

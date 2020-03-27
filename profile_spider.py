@@ -16,6 +16,10 @@ class ProfileSpider(scrapy.Spider):
     name = 'profile'
     start_urls = [next(companies)['url']]
 
+    custom_settings = {
+        'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',  # don't stop scraping when url wad duped
+    }
+
     def parse(self, response):
         # Extract js data
         settings_script = response.xpath('//script/text()').getall()[-1]

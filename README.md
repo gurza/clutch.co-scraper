@@ -1,7 +1,7 @@
 clutch.co scraper
 =================
 
-Scrape web developers from [https://clutch.co/web-developers]().
+Scrape web developers from [https://clutch.co/web-developers](https://clutch.co/web-developers).
 
 Datapoints:
 * Company name
@@ -40,5 +40,5 @@ $ head out/webdev.json
 
 $ head -2 out/profiles.csv 
 Company name,Location,Website,Av hourly rate,Employees,Founded date,Service 1,Service 1 - share,Service 2,Service 2 - share,Service 3,Service 3 - share,Framework 1,Framework 1 - share,Framework 2,Framework 2 - share,Framework 3,Framework 3 - share
-MentorMate,"Minneapolis, MN",https://mentormate.com/,$50 - $99 / hr,250 - 999,2001,Web Development,50,Custom Software Development,25,UX/UI Design,15,.NET,20,AngularJS,18,WordPress,8```
+MentorMate,"Minneapolis, MN",https://mentormate.com/,$50 - $99 / hr,250 - 999,2001,Web Development,50,Custom Software Development,25,UX/UI Design,15,.NET,20,AngularJS,18,WordPress,8
 ```

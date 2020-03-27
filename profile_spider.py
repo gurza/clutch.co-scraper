@@ -1,14 +1,20 @@
 # -*- coding: utf-8 -*-
+import os
 import re
 import json
 
 import scrapy
+import ijson
+
+
+here = os.path.dirname(os.path.abspath(__file__))
+companies_file = os.path.join(here, 'out', 'webdev.json')
+companies = ijson.items(open(companies_file), 'item')
 
 
 class ProfileSpider(scrapy.Spider):
     name = 'profile'
-    start_urls = ['https://clutch.co/profile/mencoweb-technologies',
-                  'https://clutch.co/profile/hatcher-designs',]
+    start_urls = [next(companies)['url']]
 
     def parse(self, response):
         # Extract js data
@@ -65,3 +71,9 @@ class ProfileSpider(scrapy.Spider):
             'Framework 3':         frameworks[2].get('label') if len(frameworks) > 2 else None,
             'Framework 3 - share': frameworks[2].get('value') if len(frameworks) > 2 else None,
         }
+
+        try:
+            next_page = next(companies)['url']
+            yield response.follow(next_page)
+        except StopIteration:
+            pass

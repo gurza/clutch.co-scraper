@@ -14,3 +14,10 @@ Datapoints:
 * Frameworks & CMS (TOP3)
 
 Data is parsed from HTML and JS scripts.
+
+## Install and run
+```console
+$ pip install -r requirements.txt
+$ scrapy runspider webdev_spider.py -o out/webdev.json
+$ scrapy runspider profile_spider.py -o out/profiles.csv
+```

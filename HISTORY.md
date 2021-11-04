@@ -1,9 +1,16 @@
+1.0.1 (2021-11-04)
+------------------
+
+- Scrapy security update.
+
+
 1.0.0 (2020-03-27)
 ------------------
 
 Scrape web developers from [https://clutch.co/web-developers]().
 
-Datapoints:
+Data points:
+
 - Company name
 - Location
 - Website

@@ -1,2 +1,2 @@
-Scrapy==2.5.1
+Scrapy==2.11.1
 ijson==2.6.1
